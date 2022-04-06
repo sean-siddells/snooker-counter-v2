@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import {useState} from "react"
-
+import RedBall from "./balls/RedBall"
 
 
 const Yellow = styled.button`
@@ -31,18 +31,10 @@ const Container= styled.span`
   margin: 0 auto;
 `
 function BallButtons () {
-  let [redCount, setRedCount] = useState(15)
-
-  function handleClick () {
-    setRedCount(redCount --)
-  }
 
   return (
     <Container>
-      {redCount > 0 ?
-       <Red className="balls" onClick={handleClick}>{redCount}</Red> :
-       <Invisible className='balls'/>
-      }
+      <RedBall/>
       <Yellow className="balls"/>
       <Green className="balls"/>
       <Brown className="balls"/>
