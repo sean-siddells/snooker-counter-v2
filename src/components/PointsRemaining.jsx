@@ -3,11 +3,11 @@ import React, {useState} from "react"
 
 const RemainingPoints = styled.h1`
   text-align: center;
-  font-size: 10rem;
+  font-size: 5rem;
 `
 
-function PointsRemaining () {
-  const [pointsLeft, setPointsLeft] = useState(147)
+function PointsRemaining (props) {
+  const [pointsLeft, setPointsLeft] = useState(props.props[0])
   return (
     <RemainingPoints>{pointsLeft}</RemainingPoints>
   )
