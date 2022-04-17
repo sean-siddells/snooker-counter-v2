@@ -14,6 +14,7 @@ const Invisible = styled.button`
 function RedBall (props) {
   let [redCount, setRedCount] = useState(15)
 
+
   return(
     <>
       {redCount > 0 ?
