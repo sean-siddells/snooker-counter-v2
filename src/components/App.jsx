@@ -1,7 +1,18 @@
 import BallButtons from "./BallButtons"
 import PointsRemaining from "./PointsRemaining"
+import { useState, useEffect } from "react"
+import PlayerPointsMenu from './PlayerPointsMenu'
+import NavBarIcon from "./NavBarIcon"
 
 function App() {
+
+  let [isNavBarOpen, setNavBarOpen] = useState(false)
+
+  function handleClick () {
+    console.log('im clicked')
+    return setNavBarOpen(!isNavBarOpen)
+  }
+
   let player1 =
   {
     red: 0,
@@ -22,12 +33,17 @@ function App() {
   }
   let player2 = JSON.parse(JSON.stringify(player1))
   const pointsRemaining = 147
-  const stats = [pointsRemaining, player1, player2]
+  const [stats, setStats] = useState([pointsRemaining, player1, player2])
+
+
   return (
-    <div className="App">
-      <PointsRemaining props={stats}/>
-      <BallButtons/>
-    </div>
+      <div className="App">
+        <div onClick= {handleClick}>
+          <NavBarIcon/>
+        </div>
+        <PointsRemaining props={stats}/>
+        {isNavBarOpen ? <PlayerPointsMenu/> : null}
+      </div>
   );
 }
 
