@@ -1,21 +1,18 @@
 import styled from "styled-components"
-import React, {useState} from "react"
 
-const RemainingPoints = styled.h1`
+const RemainingPoints = styled.div`
   text-align: center;
   font-size: 10vw;
 `
-const Header = styled.h1`
-  font-size: 5vw;
+const Header = styled.h2`
+  font-size: 2.5vw;
 `
-function PointsRemaining (props) {
-  const [pointsLeft, setPointsLeft] = useState(props.props[0])
+export default function PointsRemaining (props) {
+
   return (
     <RemainingPoints>
       <Header>Points Remaining:</Header>
-      {pointsLeft}
+      {props.pointsRemaining}
     </RemainingPoints>
   )
 }
-
-export default PointsRemaining
