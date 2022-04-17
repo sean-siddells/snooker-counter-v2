@@ -2,6 +2,7 @@ import BallButtons from "./BallButtons"
 import PointsRemaining from "./PointsRemaining"
 import { useState, useEffect } from "react"
 import PlayerPointsMenu from './PlayerPointsMenu'
+import PlayerScore from './PlayerScore'
 import NavBarIcon from "./NavBarIcon"
 
 function App() {
@@ -9,7 +10,6 @@ function App() {
   let [isNavBarOpen, setNavBarOpen] = useState(false)
 
   function handleClick () {
-    console.log('im clicked')
     return setNavBarOpen(!isNavBarOpen)
   }
 
@@ -31,16 +31,17 @@ function App() {
     },
     totalScore: 0,
   }
+
   let player2 = JSON.parse(JSON.stringify(player1))
   const pointsRemaining = 147
   const [stats, setStats] = useState([pointsRemaining, player1, player2])
-
 
   return (
       <div className="App">
         <div onClick= {handleClick}>
           <NavBarIcon/>
         </div>
+        <PlayerScore player1 = {stats[1]} player2= {stats[2]}/>
         <PointsRemaining props={stats}/>
         {isNavBarOpen ? <PlayerPointsMenu/> : null}
       </div>

@@ -13,21 +13,25 @@ import FreeBall from "./balls/FreeBall"
 
 const Container= styled.span`
   display: flex;
-  margin: 0 auto;
+  margin: 5vh 5vh;
 `
 function BallButtons () {
 
   return (
+    <>
     <Container>
       <RedBall/>
       <YellowBall/>
       <GreenBall/>
       <BrownBall/>
+    </Container>
+    <Container>
       <BlueBall/>
       <PinkBall/>
       <BlackBall/>
       <FreeBall/>
     </Container>
+    </>
   )
 }
 

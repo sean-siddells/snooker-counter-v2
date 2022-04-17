@@ -5,11 +5,10 @@ const Red  = styled.button`
   background-color: rgb(179, 15, 15);
   font-style: bold;
   font-size:20px;
-  line-height:75px;
-  height: 75px;
+  line-height:5vh;
 `
 const Invisible = styled.button`
-visibility: hidden;
+  visibility: hidden;
 `
 
 function RedBall (props) {
