@@ -13,40 +13,34 @@ const Wrapper = styled.span`
   margin: 0 auto;
   justify-content: center;
 `
-const Button = styled.button`
-margin: auto 2vw;
-display: fel
-`
-
 export default function NavBarMenu () {
   let [isHidden, setIsHidden] = useState(false)
-  let [addPointsButtonHidden, setAddPointsButtonHidden] = useState(true)
+  let [buttonHidden, setButtonHidden] = useState(true)
 
-  function handleAddPointsClick () {
-    console.log('this is addpointsbutton state', addPointsButtonHidden)
+  function handleHidden () {
+    console.log('this is addpointsbutton state', buttonHidden)
     setIsHidden(!isHidden)
-    return setAddPointsButtonHidden(!addPointsButtonHidden)
+    return setButtonHidden(!buttonHidden)
   }
 
-  function handleSubmit (e) {
-    e.preventDefault()
+  function handleSubmit () {
    return console.log('I still need to be set up!')
   }
 
-
   return (
     <>
-      {isHidden ? null : <AddPoints onClick={handleAddPointsClick} >Add Points</AddPoints>}
-      {addPointsButtonHidden ? null :
+      {isHidden ? null :
+      <>
+        <AddPoints onClick={handleHidden} >Add Points</AddPoints>
+        <AddPoints onClick={handleHidden} >Add Fouls</AddPoints>
+      </>
+      }
+      {buttonHidden ? null :
         <>
           <BallButtons/>
           <Wrapper>
-            <div onClick= {handleSubmit}>
-              <Button>Submit</Button>
-            </div>
-            <div onClick= {handleAddPointsClick}>
-              <Button>Back</Button>
-              </div>
+              <button onClick= {handleSubmit}>Submit</button>
+              <button onClick= {handleHidden}>Back</button>
           </Wrapper>
         </>}
     </>
