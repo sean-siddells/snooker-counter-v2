@@ -4,11 +4,16 @@
   height: 75px;
   width: 75px;
   display: inline-block;
-  margin:auto;
+  margin: auto;
   text-align: center;
-  vertical-align:top;
+  vertical-align: top;
   cursor: pointer;
   font-weight: bold;
   font-size: 20px;
 }
 
+.navbar-button {
+  height: fit-content;
+  width: fit-content;
+  padding: 0;
+}
