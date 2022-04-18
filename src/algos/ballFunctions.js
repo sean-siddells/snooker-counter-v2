@@ -1,8 +1,7 @@
 function scoreBall (colour) {
-  const ballColour = colour
   let ballValue = 1
 
-  switch (ballColour) {
+  switch (colour) {
     case 'yellow':
       ballValue = 2
       break
@@ -24,7 +23,6 @@ function scoreBall (colour) {
     default:
       break
   }
-
   return ballValue
 }
 

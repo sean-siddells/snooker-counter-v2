@@ -3,9 +3,20 @@ import {useState} from 'react'
 import BallButtons from './BallButtons'
 
 const AddPoints = styled.button`
-display: flex;
-margin: 2.5vw auto;
-position: center;
+  display: flex;
+  margin: 2.5vw auto;
+  position: center;
+`
+
+const NavBarWrapper = styled.div`
+  width: ${window.screen.width - 100 + 'px'};
+  height: ${window.screen.height - 200 + 'px'};
+  z-index: 1;
+  background-color: rgb(181, 215, 181);
+  position: absolute;
+  top: 25%;
+  margin: 0 10%;
+  border-radius: 10px;
 `
 
 const Wrapper = styled.span`
@@ -13,12 +24,11 @@ const Wrapper = styled.span`
   margin: 0 auto;
   justify-content: center;
 `
-export default function NavBarMenu () {
+export default function NavBarMenu (props) {
   let [isHidden, setIsHidden] = useState(false)
   let [buttonHidden, setButtonHidden] = useState(true)
 
   function handleHidden () {
-    console.log('this is addpointsbutton state', buttonHidden)
     setIsHidden(!isHidden)
     return setButtonHidden(!buttonHidden)
   }
@@ -28,7 +38,7 @@ export default function NavBarMenu () {
   }
 
   return (
-    <>
+    <NavBarWrapper>
       {isHidden ? null :
       <>
         <AddPoints onClick={handleHidden} >Add Points</AddPoints>
@@ -37,13 +47,13 @@ export default function NavBarMenu () {
       }
       {buttonHidden ? null :
         <>
-          <BallButtons/>
+          <BallButtons props={props}/>
           <Wrapper>
-              <button onClick= {handleSubmit}>Submit</button>
-              <button onClick= {handleHidden}>Back</button>
+            <button onClick= {handleSubmit}>Submit</button>
+            <button onClick= {handleHidden}>Back</button>
           </Wrapper>
         </>}
-    </>
+  </NavBarWrapper>
   )
 }
 

@@ -14,11 +14,13 @@ const Invisible = styled.button`
 function RedBall (props) {
   let [redCount, setRedCount] = useState(15)
 
-
+  function handleRed(props) {
+    return props.redCount++
+  }
   return(
     <>
       {redCount > 0 ?
-       <Red className="balls" onClick={() => {setRedCount(redCount -1)}}>{redCount}</Red> :
+       <Red className="balls" onClick={() => {setRedCount(redCount -1) && handleRed(props)}}>{redCount}</Red> :
        <Invisible className='balls'/>
       }
     </>
