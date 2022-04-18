@@ -1,13 +1,12 @@
-import styled from 'styled-components'
+import styled from "styled-components";
+import React from "react";
 
-const Brown= styled.button`
+const Brown = styled.button`
   background-color: rgba(143, 9, 9, 0.685);
-`
+`;
 
-function BrownBall () {
-  return(
-    <Brown className='balls'/>
-  )
+function BrownBall() {
+  return <Brown className="balls" />;
 }
 
-export default BrownBall
+export default BrownBall;

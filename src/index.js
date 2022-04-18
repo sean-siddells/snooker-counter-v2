@@ -1,25 +1,25 @@
-import React from 'react';
-import {createRoot} from 'react-dom/client';
-import './index.css';
-import App from './components/App';
-import reportWebVitals from './reportWebVitals';
-import {BrowserRouter} from 'react-router-dom'
-import {initializeApp} from 'firebase/app'
-import {getFirebaseConfig} from './firebase-config'
+import React from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./components/App";
+import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter } from "react-router-dom";
+import { initializeApp } from "firebase/app";
+import { getFirebaseConfig } from "./firebase-config";
 
-const rootElement= document.getElementById('root')
-const root= createRoot(rootElement)
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
 
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </React.StrictMode>,
+  </React.StrictMode>
 );
 
-const firebaseAppConfig = getFirebaseConfig()
-initializeApp(firebaseAppConfig)
+const firebaseAppConfig = getFirebaseConfig();
+initializeApp(firebaseAppConfig);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

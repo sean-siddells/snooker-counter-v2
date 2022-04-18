@@ -1,0 +1,30 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eda/react"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "parser": "@babel/eslint-parser",
+        "requireConfigFile": false,
+        "sourceType": "module",
+        "babelOptions": {
+          "presets": ["@babel/preset-react"]
+        }
+    },
+    "plugins": [
+        "react",
+        "jsx"
+    ],
+    "rules": {
+      "semi": "off",
+      "no-unused-vars": [1],
+      ""
+    }
+}

@@ -1,13 +1,12 @@
-import styled from 'styled-components'
+import styled from "styled-components";
+import React from "react";
 
-const Black= styled.button`
+const Black = styled.button`
   background-color: black;
-`
+`;
 
-function BlackBall () {
-  return(
-    <Black className='balls' />
-  )
+function BlackBall() {
+  return <Black className="balls" />;
 }
 
-export default BlackBall
+export default BlackBall;
