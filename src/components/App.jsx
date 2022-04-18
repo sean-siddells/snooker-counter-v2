@@ -5,6 +5,7 @@ import { useState, useEffect } from "react"
 import PlayerScore from './PlayerScore'
 import NavBarIcon from "./navBar/NavBarIcon"
 import NavBarMenu from "./navBar/NavBarMenu"
+import {Routes, Route, Router} from 'react-router-dom'
 
 function App() {
 
@@ -42,12 +43,18 @@ function App() {
 
   return (
     <div className="App">
-      <div className='navbar-button' onClick={handleClick}>
-        <NavBarIcon />
-      </div>
-      <PlayerScore player1={stats[1]} player2={stats[2]} />
-      <PointsRemaining pointsRemaining={stats[0]} />
-      {isNavBarOpen ? <NavBarMenu props={stats} /> : null}
+      <Routes>
+        <Route path='/' element={
+          <>
+            <div className='navbar-button' onClick={handleClick}>
+              <NavBarIcon />
+            </div>
+            <PlayerScore player1={stats[1]} player2={stats[2]} />
+            <PointsRemaining pointsRemaining={stats[0]} />
+            {isNavBarOpen ? <NavBarMenu props={stats} /> : null}
+          </>
+        }/>
+      </Routes>
     </div>
   );
 }
