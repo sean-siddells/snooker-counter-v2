@@ -5,7 +5,7 @@ import { useState, useEffect } from "react"
 import PlayerScore from './PlayerScore'
 import NavBarIcon from "./navBar/NavBarIcon"
 import NavBarMenu from "./navBar/NavBarMenu"
-import {Routes, Route, Router} from 'react-router-dom'
+import {Routes, Route} from 'react-router-dom'
 
 function App() {
 
