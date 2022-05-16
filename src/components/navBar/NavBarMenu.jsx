@@ -12,7 +12,7 @@ const NavBarWrapper = styled.div`
   width: ${window.screen.width - 100 + "px"};
   height: ${window.screen.height - 200 + "px"};
   z-index: 1;
-  background-color: rgb(181, 215, 181);
+  background-color: grey;
   position: absolute;
   top: 25%;
   margin: 0 10%;
