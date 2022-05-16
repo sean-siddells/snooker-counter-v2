@@ -1,6 +1,6 @@
 function scoreBall(colour) {
   let ballValue = 1;
-
+  console.log(colour + 'ball has been clicked')
   switch (colour) {
     case "yellow":
       ballValue = 2;
@@ -23,7 +23,7 @@ function scoreBall(colour) {
     default:
       break;
   }
-  return ballValue;
+  return null;
 }
 
 module.exports = {
