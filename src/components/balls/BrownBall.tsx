@@ -7,7 +7,7 @@ const Brown = styled.button`
 `;
 
 function BrownBall() {
-  return <Brown className="balls"  onClick={scoreBall('brown')}  />;
+  return <Brown className="balls"  onClick={() => scoreBall('brown')}  />;
 }
 
 export default BrownBall;

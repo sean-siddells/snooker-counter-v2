@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import React, { useState } from "react";
-
+import scoreBall from "../../algos/ballFunctions";
 const Red = styled.button`
   background-color: rgb(179, 15, 15);
   font-style: bold;
@@ -23,6 +23,7 @@ function RedBall(props) {
           className="balls"
           onClick={() => {
             setRedCount(redCount - 1)
+            scoreBall('red')
           }}
         >
           {redCount}

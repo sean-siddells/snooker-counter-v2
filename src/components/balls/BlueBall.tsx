@@ -7,7 +7,7 @@ const Blue = styled.button`
 `;
 
 function BlueBall() {
-  return <Blue className="balls" onClick={scoreBall('blue')}/>;
+  return <Blue className="balls" onClick={() => scoreBall('blue')}/>;
 }
 
 export default BlueBall;

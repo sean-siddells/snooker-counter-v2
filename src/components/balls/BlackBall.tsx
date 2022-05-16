@@ -7,7 +7,7 @@ const Black = styled.button`
 `
 
 function BlackBall() {
-  return <Black className='balls' onClick={scoreBall('black')}/>
+  return <Black className='balls' onClick={() => scoreBall('black')}/>
 }
 
 

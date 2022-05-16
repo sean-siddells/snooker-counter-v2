@@ -7,7 +7,7 @@ const Pink = styled.button`
 `;
 
 function PinkBall() {
-  return <Pink className="balls" onClick={scoreBall('pink')} />;
+  return <Pink className="balls" onClick={() => scoreBall('pink')} />;
 }
 
 export default PinkBall;

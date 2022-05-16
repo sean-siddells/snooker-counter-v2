@@ -7,7 +7,7 @@ const Green = styled.button`
 `;
 
 function GreenBall() {
-  return <Green className="balls" onClick={scoreBall('green')} />
+  return <Green className="balls" onClick={() => scoreBall('green')} />
 }
 
 export default GreenBall;

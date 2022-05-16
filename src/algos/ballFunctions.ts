@@ -1,7 +1,10 @@
 export default function scoreBall(colour: string) {
-  let ballValue: number = 1
+  let ballValue = 1
   console.log(colour + 'ball has been clicked')
   switch (colour) {
+    case "red":
+      ballValue
+      break
     case "yellow":
       ballValue = 2
       break
@@ -21,7 +24,7 @@ export default function scoreBall(colour: string) {
       ballValue = 7;
       break
     case "free":
-      ballValue = 1
+      ballValue
       break
     default:
       break

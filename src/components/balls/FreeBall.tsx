@@ -9,7 +9,7 @@ const Free = styled.button`
 `;
 
 function FreeBall() {
-  return <Free className="balls" onClick={scoreBall('free')}/>;
+  return <Free className="balls" onClick={() => scoreBall('free')}/>;
 }
 
 export default FreeBall;
