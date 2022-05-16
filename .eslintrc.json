@@ -1,29 +1,45 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true
-    },
-    "extends": [
-        "eda/react"
-    ],
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": "latest",
-        "parser": "@babel/eslint-parser",
-        "requireConfigFile": false,
-        "sourceType": "module",
-        "babelOptions": {
-          "presets": ["@babel/preset-react"]
-        }
-    },
-    "plugins": [
-        "react",
-        "jsx"
-    ],
-    "rules": {
-      "semi": "off",
-      "no-unused-vars": [1]
-    }
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "rules": {
+    "semi" : "off",
+    "prettier/prettier" : 1
+  }
 }
+
+// {
+//     "env": {
+//         "browser": true,
+//         "es2021": true
+//     },
+//     "parserOptions": {
+//         "ecmaFeatures": {
+//             "jsx": true
+//         },
+//         "ecmaVersion": "latest",
+//         "parser": "@babel/eslint-parser",
+//         "requireConfigFile": false,
+//         "sourceType": "module",
+//         "babelOptions": {
+//           "presets": ["@babel/preset-react"]
+//         }
+//     },
+//     "plugins": [
+//         "react",
+//         "jsx"
+//     ],
+//     "rules": {
+//       "semi": "off",
+//       "no-unused-vars": [1]
+//     }
+// }

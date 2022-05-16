@@ -3,20 +3,21 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./components/App";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import { initializeApp } from "firebase/app";
-import { getFirebaseConfig } from "./firebase-config";
+import getFirebaseConfig from "./firebase-config";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
+
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <Router>
       <App />
-    </BrowserRouter>
+    </Router>
   </React.StrictMode>
-);
+)
 
 const firebaseAppConfig = getFirebaseConfig();
 initializeApp(firebaseAppConfig);

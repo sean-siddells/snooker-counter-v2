@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import React from "react";
-import { scoreBall } from "../../algos/ballFunctions";
+import scoreBall from "../../algos/ballFunctions";
 
 const Blue = styled.button`
   background-color: rgb(55, 55, 218);

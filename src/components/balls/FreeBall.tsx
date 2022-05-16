@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import React from "react";
-import { scoreBall } from "../../algos/ballFunctions";
+import scoreBall from "../../algos/ballFunctions";
 
 const Free = styled.button`
   background-color: whitesmoke;
@@ -9,7 +9,7 @@ const Free = styled.button`
 `;
 
 function FreeBall() {
-  return <Free className="balls" onClick={scoreBall()}/>;
+  return <Free className="balls" onClick={scoreBall('free')}/>;
 }
 
 export default FreeBall;
